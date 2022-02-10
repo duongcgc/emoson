@@ -1,0 +1,94 @@
+// header-4
+.header-4 {
+    @media screen and (min-width: $size-site-md) {
+        padding: 0;
+    }
+
+    #masthead {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .header-topbar {
+            width: 100%;
+
+            @media screen and (min-width: $size-site-md) {
+                background-color: $color_background_light;
+            }
+
+            .inner-topbar {
+                @include container_boxed();
+
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+
+                .main-navigation {
+                    justify-self: left;
+                }
+
+                .search-box {
+                    justify-self: right;
+                }
+
+                @media screen and (min-width: $size-site-md) {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: -webkit-fill-available;
+
+                    #primary-menu {
+                        background-color: transparent;
+                        padding: 20px 0;
+
+                        a {
+                            color: white;
+                            font-family: $font__body;
+                            font-weight: normal;
+                        }
+                    }
+
+                    .gcod-social-icons {
+                        display: flex;
+                        @include social-icon-white("facebook");
+                        @include social-icon-white("twitter");
+                        @include social-icon-white("instagram");
+                    }
+
+                    .icon-search {
+                        background-image: url(./assets/images/search-icon-white.svg);
+                        background-size: 23px 23px;
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+        .site-branding {
+            width: 100%;
+
+            .inner-branding {
+                @include container_boxed();
+
+                display: flex;
+                margin: auto;
+                justify-content: space-around;
+                text-align: center;
+                width: fit-content;
+                position: relative;
+                top: -36px;
+
+                @media screen and (min-width: $size-site-md) {
+                    position: static;
+                    padding: 60px 30px;
+                }
+            }
+        }
+
+        .darkmode-icon {
+            display: none;
+        }
+    }
+}

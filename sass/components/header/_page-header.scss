@@ -1,0 +1,61 @@
+.container-header {
+    position: relative;
+
+    // Page header 1
+    &.page-header-1 {
+        background-color: rgba(0, 0, 0, 0.3);
+        background-blend-mode: darken;
+        color: white;
+
+        .breadcrumbs {
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.header-overlay {
+    .container-header {
+        .page-header {
+            padding-top: 300px;
+        }
+
+        .header-3 {
+            & + .page-header {
+                padding-top: 490px;
+
+                @media screen and (max-width: $size-site-md) {
+                    padding-top: 230px;
+                }
+
+                .inner-page-header {
+                    padding: 190px 15px 0 15px;
+
+                    @media screen and (max-width: $size-site-md) {
+                        padding: 110px 15px 50px 15px;
+                    }
+                }
+            }
+
+            &.fixed-header {
+                & + .page-header {
+
+                    @media screen and (max-width: $size-site-md) {
+                        padding-top: 230px;
+                        min-height: 230px !important;
+                    }
+
+                    .inner-page-header {
+                        @media screen and (max-width: $size-site-md) {
+                            padding: 140px 15px 50px 15px;
+                        }
+                    } 
+                }
+            }
+        }
+
+        
+    }
+}

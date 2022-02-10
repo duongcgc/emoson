@@ -1,0 +1,25 @@
+.customize-partial-edit-shortcuts-shown {
+
+   .site-branding {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		margin-left: -30px; // Pull it to the left, to keep the logo centered when the edit link is shown.
+
+		.customize-partial-edit-shortcut,
+		.customize-partial-edit-shortcut-button {
+			position: relative;
+			float: none;
+		}
+
+		.customize-partial-edit-shortcut-button {
+			left: -10px;
+		}
+
+		.customize-partial-edit-shortcut {
+			height: auto;
+			left: initial;
+			width: auto;
+		}
+	}
+}

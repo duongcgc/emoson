@@ -1,0 +1,20 @@
+#side-sortables .cmb-type-group .inside .cmb2-wrap > .cmb-field-list > .cmb-row {
+  padding: 10px 0;
+}
+#side-sortables .cmb2-postbox .inside .cmb2-wrap > .cmb-field-list > .cmb-row {
+  padding: 10px 0;
+}
+#side-sortables .cmb2-wrap .cmb-th {
+  padding-bottom: 0;
+}
+#side-sortables .cmb2-wrap .cmb-row .cmb2-metabox-description {
+  padding-bottom: 0;
+}
+#side-sortables .cmb2-wrap .inner-sidebar .cmb-row .cmb2-metabox-description {
+  padding-bottom: 0;
+}
+
+.inner-sidebar .cmb2-wrap .cmb-th {
+  padding-bottom: 0;
+}
+/*# sourceMappingURL=gcod-metabox.css.map */

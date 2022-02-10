@@ -1,0 +1,14 @@
+#bsf_rt_progress_bar_container {
+    z-index: 9999;
+}
+
+.entry-content {
+    .bsf-rt-reading-time {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 1em !important;
+        margin-left: 0 !important;
+        background-color: transparent !important;
+        color: $color-active !important;
+    }
+}

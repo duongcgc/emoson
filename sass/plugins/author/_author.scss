@@ -1,0 +1,97 @@
+.wp_post_author_widget {
+    margin-bottom: 50px;
+    
+    .wp-post-author-wrap {
+        .awpa-img {
+            img {
+                max-width: 200px;
+                width: 200px;
+                height: auto;
+            }
+
+            &.awpa-author-block {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        .wp-post-author-meta {
+            &.awpa-author-block {
+                margin-top: 40px;
+
+                .awpa-display-name {
+
+                    a {
+                        color: #000;
+                    }
+                    
+                    text-transform: uppercase;
+                    font-family: $font__title;
+                    font-weight: 600;
+                    font-size: 40px;
+                }
+            }
+        }
+
+        border: solid 1px #828282;
+        padding: 60px 30px;
+    }
+}
+
+
+// Single version - Left Version
+.entry-content {
+    .wp-post-author-wrap {
+        &.left {
+            .awpa-title {
+                display: none;
+                visibility: hidden;
+            }
+
+            .wp-post-author {
+                .awpa-img {
+                    &.awpa-author-block {
+                        margin-top: 0;
+                        .round {
+                            
+                        }
+                    }
+                } 
+            }
+
+            .wp-post-author-meta {
+                &.awpa-author-block {
+                    width: 55%;
+
+                    .awpa-display-name {
+                        a {
+                            font-weight: 600;
+                            font-size: 38px;
+                            text-transform: uppercase;
+                        }
+                        
+                    }
+                }
+            }
+
+            .awpa-img {
+
+                &.awpa-author-block {
+                    width: 35%;
+                }
+                &.round {
+
+                    img {
+                        min-width: 200px;
+                        height: auto;
+                    }
+                }
+            }
+
+            padding: 40px;
+        }
+
+        margin-bottom: 20px;
+    }
+    
+}

@@ -1,0 +1,56 @@
+// Color for site
+
+$color_title_light: #000000;
+$color_title_dark: #C9C9C9;
+$color_body_light: #28293D;
+$color_body_light_2: #828282;
+$color_body_dark: #C9C9C9;
+$color_body_dark_2: #919191;
+$color_button_dark: #fff;
+$color_background_light: #fff;
+$color_button_light: #000;
+$color_background_dark: #000;
+$color_background_dark_2: #141414;
+$color_active: #99521F;
+$color_white: #FFFFFF;
+$color_black: #000000;
+
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: $color_active; //royalblue
+$color__link-visited: $color__link; //purple
+$color__link-hover: $color_active; //midnightblue
+$color__text-main: #404040;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+// color sets concept - back / front
+$color__text-1: #333;
+$color__background-1: #fff;
+$color__text-2: #333;
+$color__background-2: #fff;
+$color__text-3: #333;
+$color__background-3: #fff;
+$color__text-4: #333;
+$color__background-4: #fff;
+$color__text-5: #333;
+$color__background-5: #fff;
+$color__text-6: #333;
+$color__background-6: #fff;
+
+// Darkmode Color
+$color__background--darkmode: #000;
+$color__text--darkmode: #FFF;
+$color__active--darkmode: $color_active;

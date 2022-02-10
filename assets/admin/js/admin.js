@@ -1,0 +1,1 @@
+(function ($) { "use strict"; jQuery(window).ready(function () { jQuery('.widget_social li').click(function () { jQuery(this).find('i').toggleClass('color-social-wide') }) }) })(jQuery)

@@ -1,0 +1,46 @@
+// Footer 1
+.footer-1 {
+    
+    background-color: $color_background_light;
+    color: $color_body_light;
+
+    padding: 22px 0;
+
+    @media screen and (min-width: $size-site-md) {
+        padding: 30px 15px;
+    }
+
+    width: 100%;
+    @include bgcolor(0.3);
+
+    #colophon {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;  
+
+        @media screen and (min-width: $size-site-md) {
+            justify-content: space-between;
+            align-items: flex-start;  
+
+        }
+        
+        .site-branding {
+            margin-bottom: 20px;
+        }
+        
+        .site-copyright {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+
+            .copyright-text {
+                display: block;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+}

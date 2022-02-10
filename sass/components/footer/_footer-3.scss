@@ -1,0 +1,138 @@
+// Footer 3
+.footer-3 {
+    background-color: $color_background_light;
+    color: $color_body_light;
+    width: 100%;
+    @include bgcolor(0.3);
+
+    &.darkmode {
+        background-color: $color_background_dark;
+        color: $color_body_dark;
+    }
+
+    #colophon {
+        .footer-main {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: -webkit-fill-available;
+            align-items: flex-start;
+            padding: 85px 0 0;
+
+            // PC
+            @media screen and (min-width: $size-site-md) {
+                flex-direction: row;
+            }
+
+            // Mobile
+            @media screen and (max-width: $size-site-md) {
+                flex-direction: column;
+                padding-left: 15px;
+                padding-right: 15px;
+            }    
+
+            .footer-main-left {
+                width: 100%;
+                margin: 15px 0;
+
+                @media screen and (max-width: $size-site-md) {
+                    margin-bottom: 0px;
+                }
+
+                & > div {
+                    margin-bottom: 15px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                @media screen and (min-width: $size-site-md) {
+                    width: 50%;
+                }
+            }
+
+            .footer-main-right {
+                width: 100%;
+                margin: 40px 0;
+
+                @media screen and (min-width: $size-site-md) {
+                    margin: 0;
+                }
+
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: -webkit-fill-available;
+                align-items: flex-start;
+
+                // Tablet
+                @media screen and (max-width: $size-site-lg) {
+                    flex-direction: row;
+                    flex-wrap: wrap !important;
+                }    
+
+                & > div {
+                    
+                    margin-bottom: 35px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                @media screen and (min-width: $size-site-md) {
+                    width: 50%;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    padding-left: 100px;
+
+                    .footer-category {
+                        width: 40%;
+                        text-align: left;
+                        h3 {
+                            font-size: 24px;
+                            font-weight: 700;
+
+                            // @include heading-widget(left, sideline, false, white);
+                        }
+                    }
+                    .footer-social-icons {                       
+                        
+                        margin: 0;
+                        width: 60%;
+                        text-align: left;
+
+                        h3 {
+                            font-size: 24px;
+                            font-weight: 700;
+
+                            // @include heading-widget(left, sideline, false, white);
+                        }
+
+                        .social-icon-list {
+                            display: flex;
+                            justify-content: flex-start;                        
+                        }
+                    }
+                }
+
+                // Tablet
+                @media screen and (max-width: $size-site-lg) {
+                    .footer-category {
+                        width: 100%;                        
+                    }
+                    .footer-social-icons {                       
+                        width: 100%;
+                    }
+                }    
+            }
+        }
+
+        .site-copyright {
+            text-align: center;
+            padding: 30px 30px 100px;
+        }
+    }
+}

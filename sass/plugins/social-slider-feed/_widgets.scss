@@ -1,0 +1,111 @@
+.widget_gco_instagram_widget {
+
+    .widget_posts {
+        .header__module {
+            .title {
+                span {
+                    &::after {
+                        content: none;
+                        background-color: transparent;
+                        width: inherit;
+                    }
+                    padding: 0;
+                }
+                &::after {
+                    content: none;
+                    background-color: transparent;
+                    width: inherit;
+                }
+
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+
+                @include heading-widget(center, sideline, false, #CCC);
+                
+            }
+        }
+
+        .content__module {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+            .jr-insta-thumb {
+                ul {
+                    &.thumbnails {
+                        &.jr_col_3 {
+                            li {
+                                width: calc(100% / 3) !important;
+                            }
+                        }
+
+                        li {
+                            margin: 0 !important;
+                        }
+                    }
+                }
+            }
+
+            .wis-template-ad {
+                display: none;
+                visibility: hidden;
+            }
+
+            .instagram__module {
+                padding-bottom: 30px;
+            }
+
+            .post-button {
+                .btn {
+                    text-transform: uppercase;
+                    font-weight: 600;
+
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+
+                    background-color: transparent;
+                    border-color: currentColor;
+                    color: currentColor;
+                    transition: all 0.4s;
+
+                    &::after {
+                        content: url(./assets/images/instagram-icon.svg);
+                        width: 16px;
+                        height: auto;
+                        padding-left: 10px;
+                        margin-top: 5px;
+                        transition: all 0.4s;
+                    }
+
+                    &:hover {
+                        background-color: $color_active;
+                        border-color: $color_active;
+                        color: white;
+                        transition: all 0.4s;
+
+                        &::after {
+                            content: url(./assets/images/instagram-icon-white.svg);
+                            width: 16px;
+                            height: auto;
+                            transition: all 0.4s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    margin-bottom: $spacing-stacked-60 !important;
+
+}
+
+.wis-template-ad {
+    display: none;
+    visibility: hidden;
+}

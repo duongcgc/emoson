@@ -1,0 +1,130 @@
+// header-5
+.header-5 {
+    @media screen and (min-width: $size-site-md) {
+        padding: 0;
+    }
+
+    .header-wrapper {
+        background-image: url("./assets/images/header-05-bg.jpg");
+        background-size: cover;
+    }
+
+    #masthead {
+        &.site-header {
+            margin-bottom: 0;
+        }
+
+        .site-branding {
+            .inner-branding {
+                @include container_boxed();
+
+                text-align: center;
+                z-index: 9999;
+
+                @media screen and (min-width: $size-site-md) {
+                    width: 60%;
+                    padding: 60px 30px;
+                }
+            }
+        }
+        .header-topbar {
+            width: 100%;
+            padding: 20px 0;
+
+            @media screen and (min-width: $size-site-md) {
+                background-color: $color_background_light;
+            }
+
+            .innner-topbar {
+                @include container_boxed();
+
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                width: -webkit-fill-available;
+                position: relative;
+                top: -85px;
+
+                @media screen and (min-width: $size-site-md) {
+                    top: auto;
+                    align-items: center;
+
+                    .icon-search {
+                        margin-top: 12px;
+                        background-image: url(./assets/images/search-icon-white.svg);
+                        background-size: 23px 23px;
+                    }
+
+                    .main-navigation {
+                        #primary-menu {
+                            background-color: transparent;
+                            a {                                
+                                font-family: $font__body;
+                                font-weight: normal;                                
+                            }
+
+                            .sub-menu {
+                                a {
+                                    color: black;
+                                    transition: all 0.4s;
+                                    
+                                    &:hover {
+                                        color: $color_active;
+                                        transition: all 0.4s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .gcod-social-icons {
+                        display: flex;
+                        padding: 0 4px;
+
+                        @include social-icon-white("facebook");
+                        @include social-icon-white("twitter");
+                        @include social-icon-white("instagram");
+                        @include social-icon-white("linkedin");
+                        @include social-icon-white("twitter");
+                        @include social-icon-white("youtube");
+                        @include social-icon-white("dribbble");
+                        @include social-icon-white("behance");
+                        @include social-icon-white("flickr");
+                        @include social-icon-white("pinterest");
+                        @include social-icon-white("github");
+
+                        a {
+                            margin: 0 5px;
+                        }
+                    }
+
+                    .search-box {
+                        .icon-search {
+                            border: solid 1px white;
+                            border-radius: 50px;
+                            width: 44px;
+                            height: 44px;
+                            background-size: inherit;
+                            transition: all 0.4s;
+
+                            &:hover {
+                                border-color: $color_active;
+                                transition: all 0.4s;
+                            }
+                        }
+                    }
+
+                    .darkmode-icon {
+                        display: inline-block;
+                        padding-right: 8px;
+                    }
+                }
+            }
+        }
+
+        .darkmode-icon {
+            display: none;
+        }
+    }
+}

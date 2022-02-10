@@ -1,0 +1,154 @@
+// Concept and Design by UI Elements
+
+.post-thumbnail {
+    img {
+        border-radius: 2px;
+    }
+}
+
+// Buttons
+.btn,
+.wp-block-button__link {
+    padding: 15px 35px;
+}
+
+.button-square {
+    .btn,
+    .wp-block-button__link {
+        border-radius: 0;
+    }
+}
+
+// Border Radius all Square
+.button-round {
+    .btn,
+    .wp-block-button__link {
+        border-radius: 60px;
+    }
+
+    .button {
+        input[type="submit"] {
+            border-radius: 60px;
+        }
+    }
+}
+
+// Content
+#primary {
+    .post-list-5 {
+        .content__module {
+            .post {
+                border-radius: 2px;
+            }
+        }
+    }
+}
+
+// Footer
+.footer-photo {
+    img {
+        border-radius: 2px;
+    }
+}
+
+.footer-posts-list {
+    li {
+        .thumbnail {
+            img {
+                border-radius: 2px;
+            }
+        }
+    }
+}
+
+// Button Round
+
+body {
+    &.button-round {
+        .featured-slider-wrapper {
+            .featured-slider-content {
+                .content__module {
+                    .posts__module {
+                        .post-cat {
+                            @media screen and (min-width: $size-site-md) {
+                                * {
+                                    border-radius: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .post-list-wrapper {
+            .content__module {
+                .sticky {
+                    .post-cat {
+                        * {
+                            border-radius: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #secondary {
+            .widget {
+                .posts__widget {
+                    &.style-03 {
+                        .post-cat {
+                            * {
+                                border-radius: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .comments-area {
+            .form-submit {
+                .btn {
+                    border-radius: 30px;
+                }
+            }
+        }
+
+        &.single {
+            .entry-footer {
+                .cat-links {
+                    border-radius: 30px;
+                }
+            }
+        }
+
+        .archive-pagination.border {
+            .nav-links {
+                .current,
+                a {
+                    border-radius: 30px;
+                }
+            }
+        }
+
+        .widget_gcowidgetnewsletters_widget {
+            .widget_posts {
+                .content__module {
+                    div {
+                        &.name {
+                            input {
+                                border-radius: 30px;
+                            }
+                        }
+                        &.email {
+                            input {
+                                border-radius: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

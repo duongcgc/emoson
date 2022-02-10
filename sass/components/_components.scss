@@ -1,0 +1,72 @@
+/* Navigation
+--------------------------------------------- */
+@import "navigation/navigation";
+
+@import "navigation/menu";
+
+@import "navigation/breadcrumb";
+
+/* Posts and pages
+--------------------------------------------- */
+@import "content/posts-and-pages";
+
+/* Comments
+--------------------------------------------- */
+@import "comments/comments";
+
+/* Widgets
+--------------------------------------------- */
+@import "widgets/widgets";
+
+/* Media
+--------------------------------------------- */ 
+@import "media/media";
+
+/* Socials Buttons
+--------------------------------------------- */ 
+@import "shared/shared";
+
+
+/* Search
+--------------------------------------------- */
+@import "searchbox/searchbox";
+
+/* Captions
+--------------------------------------------- */
+@import "media/captions";
+
+/* Galleries
+--------------------------------------------- */
+@import "media/galleries";
+
+/* Topbar Header Footer
+--------------------------------------------- */
+@import "header/header";
+
+@import "header/page-header";
+
+@import "footer/footer";
+
+
+/* Featured Components
+--------------------------------------------- */
+@import "content/featured-slider";
+
+@import "content/featured-categories";
+
+@import "content/featured-posts";
+
+/* Home Sections
+--------------------------------------------- */
+@import "content/home-post-list";
+
+@import "content/home-lastest-posts";
+
+@import "content/home-instagram";
+
+@import "content/home-newsletter";
+
+
+/* Archive Posts
+--------------------------------------------- */
+@import "content/archive-posts";

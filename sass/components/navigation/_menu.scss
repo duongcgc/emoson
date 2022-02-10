@@ -1,0 +1,39 @@
+
+// Widget Menu
+.widget_nav_menu {
+
+	.sub-menu {
+		a {
+			font-size: 13px;
+		}
+	}
+
+	a {
+		font-size: 14px;
+
+		transition: all 0.4s;
+		&:hover {
+			text-decoration: underline;
+			text-underline-offset: 5px;
+			transition: all 0.4s;
+		}
+	}
+}
+
+// Footer Menu
+#footer-menu {
+	li {
+		display: inline-block;
+		a {
+			display: block;
+			padding: 0px 10px;
+		}
+	}
+}
+
+// Menu Mobile
+.wpmm_mobile_menu_btn {
+	&:hover {
+		color: black !important;
+	}
+}

@@ -1,0 +1,54 @@
+// stylelint-disable value-keyword-case
+$font__main: -apple-system, BlinkMacSystemFont, Poppins, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+// stylelint-enable value-keyword-case
+$font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", courier, monospace;
+$font__line-height-body: 1.75;
+$font__line-height-pre: 1.6;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+
+// font-sizes theme concept
+$font__size-1: 100px;
+$font__size-2: 80px;
+$font__size-3: 60px;
+$font__size-4: 50px;
+$font__size-5: 40px;
+$font__size-6: 30px;
+$font__size-7: 20px;
+$font__size-8: 10px;
+
+// typo sets concept - pairs
+$font_heading-1: Poppins;
+$font_body-1: Poppins;
+$font_heading-2: Poppins;
+$font_body-2: Poppins;
+$font_heading-3: Poppins;
+$font_body-3: Poppins;
+$font_heading-4: Poppins;
+$font_body-4: Poppins;
+
+// Fonts
+
+$font__body: "Poppins";
+$font__title: "Playfair Display";
+$font__code: 'Monda', sans-serif;
+
+$font__size_body: 16px;
+$font__size_widget_title: 24px;
+$font__size-1-3: 13px;
+$font__size-1-4: 14px;
+$font__size-2-4: 24px;
+$font__size-3-2: 32px;
+$font__size-3-6: 36px;
+$font__size-4-2: 42px;
+$font__size-4-8: 48px;
+$font__size-7-2: 72px;
+
+$font_weight_title-400: 400;
+$font_weight_title-600: 600;
+$font_weight_title-700: 700;
+
+$font_style_normal: normal;
+$text_transform_uppercase: uppercase;
+$line-height-body: 1.7;

@@ -1,0 +1,39 @@
+/* Custom Blocks Styles */
+.lazyblock {
+  padding: 0 !important;
+  -webkit-box-shadow: 0 0 0 1px transparent !important;
+          box-shadow: 0 0 0 1px transparent !important;
+}
+
+.lazyblock:hover {
+  -webkit-box-shadow: 0 0 0 1px #e6e6e6 !important;
+          box-shadow: 0 0 0 1px #e6e6e6 !important;
+  cursor: text;
+}
+
+.lazyblock .lzb-content-title {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.lazyblock {
+  padding: 0 !important;
+  -webkit-box-shadow: 0 0 0 1px transparent !important;
+          box-shadow: 0 0 0 1px transparent !important;
+}
+
+.lazyblock:hover {
+  -webkit-box-shadow: 0 0 0 1px #e6e6e6 !important;
+          box-shadow: 0 0 0 1px #e6e6e6 !important;
+  cursor: text;
+}
+
+.lazyblock .lzb-content-title {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.wp-block-lazyblock-copress-photo-block img {
+  border: solid 1px green;
+}
+/*# sourceMappingURL=copress-blocks.css.map */

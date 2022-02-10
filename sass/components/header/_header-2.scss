@@ -1,0 +1,296 @@
+.single-post {
+    &.right-sidebar {
+        .header-2 {
+            .site-content {
+                max-width: 1020px;
+                grid-template-columns: 700px 300px;
+                justify-content: space-between;
+
+                #primary {
+                    padding-right: 30px;
+                }
+
+                #secondary {
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+
+    &.no-sidebar {
+        #page {
+            .header-2 {
+                .site-content {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    .header-2 {
+        .container-header {
+            @media screen and (min-width: $size-site-md) {
+                &::after {
+                    content: "";
+                    display: block;
+                    position: relative;
+                    background-color: white;
+                    width: 70%;
+                    height: 40px;
+                    bottom: 0;
+                    margin: auto;
+                }
+            }
+        }
+
+        #secondary {
+            &.widget-area {
+                .wp_post_author_widget {
+                    .wp-post-author-wrap {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// header-2
+.header-2 {
+    .container-header {
+        @media screen and (min-width: $size-site-md) {
+            padding: 0;
+
+            .header-wrapper {
+                padding: 20px 0;
+            }
+
+            .page-header {
+                .inner-page-header {
+                    .header-wrapper {
+                        padding: 15px 0;
+        
+                        .single-heading {
+                            font-size: 36px;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    #masthead {
+        @media screen and (min-width: $size-site-md) {
+            margin-bottom: 0;
+        }
+
+        .site-branding {
+            display: grid;
+            grid-template-areas: "mainnav";
+            grid-template-columns: auto;
+
+            width: 100%;
+            @include container_boxed();
+
+            .main-navigation {
+                grid-area: mainnav;
+                text-align: center;
+            }
+
+            .gcod_logo {
+                grid-area: mainlogo;
+                text-align: left;
+            }
+
+            .search-box {
+                grid-area: searchbox;
+                text-align: left;
+            }
+
+            @media screen and (min-width: $size-site-md) {
+                display: grid;
+                grid-template-areas: "mainnav";
+                grid-template-columns: 100%;
+                flex-wrap: nowrap;
+                justify-items: center;
+                align-items: center;
+                text-align: center;
+
+                // main menu
+                .main-navigation {
+                    display: flex;
+                    justify-content: center;
+                    padding-right: 0;
+
+                    #wp-megamenu-main-menu {
+                        width: 100%;
+
+                        .wpmm_dropdown_menu,
+                        .wpmm_mega_menu {
+                            a {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                align-content: center;
+
+                                .fa {
+                                    padding-left: 5px;
+                                }
+                            }
+
+                            .wp-megamenu-sub-menu {
+                                a {
+                                    .fa {
+                                        margin-top: 10px;
+                                    }
+                                } 
+                            }
+
+                            &.current-menu-item,
+                            &.current_page_item {
+                                display: inline-block;
+                                justify-content: center;
+                                flex-wrap: wrap;
+                                flex-direction: column;
+                                align-items: center;
+                                align-content: center;                               
+
+                                &::after {
+                                    content: "";
+                                    background-color: $color-active;
+                                    width: 30px;
+                                    height: 1px;
+                                    position: relative;
+                                    top: -16px;
+                                }
+                            }
+
+                            & > a {
+                                &:hover {
+                                    color: $color-active;
+                                    text-decoration: underline;
+                                    text-underline-position: under;
+                                    text-underline-offset: 10px;
+                                    transition: all 0.4s;
+
+                                    .fa {   
+                                        text-decoration: none !important;                                     
+                                        &::before {
+                                            
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .wpmm-search {
+                                &.search-close-icon {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        & > .wpmm-nav-wrap {
+                            ul {
+                                &.wp-megamenu {
+                                    display: flex;
+                                    justify-content: right;
+                                    align-items: center;
+                                    align-content: center;
+
+                                    .wpmm_dropdown_menu {
+                                        .wp-megamenu-sub-menu {
+                                            padding: 5px 10px;
+                                        }
+                                    }
+                                }
+
+                                & > li {
+                                    ul {
+                                        &.wp-megamenu-sub-menu {
+                                            li {
+                                                color: #000;
+                                                padding: 10px;
+
+                                                a {
+                                                    color: #000 !important;
+                                                    padding: 0;
+
+                                                    &:hover {
+                                                        color: $color__active--darkmode !important;                                                                                                                
+                                                        padding-left: 5px;
+                                                        text-decoration: underline;
+                                                        text-underline-position: under;
+                                                        transition: all 0.4s;                                                        
+                                                    }
+                                                }
+
+                                                &:hover {
+                                                    & > a {
+                                                        color: $color__active--darkmode !important;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    #primary-menu {
+                        background-color: transparent;
+
+                        & > li {
+                            a {
+                                color: $color__text--darkmode;
+                                &:hover {
+                                    color: $color__active--darkmode;
+                                }
+                            }
+                            &.current_page_item {
+                                & > a {
+                                    color: $color__active--darkmode;
+                                }
+                            }
+                        }
+                        .sub-menu {
+                            li {
+                                a {
+                                    color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // search box
+                .search-box {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: -4px;
+                    .label {
+                        display: inline-block;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.admin-bar {
+    &.header-sticky {
+        .header-wrapper{
+            &.fixed-header {
+                padding: 50px 0 20px 0;
+
+                @media screen and (max-width: $size-site-md) {
+                    padding: 30px 0 20px 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+#page {
+    .instagram-wrapper {
+        padding: 85px 0 0 0;
+
+        .inner-instagram {
+            min-height: 400px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-start;
+            align-content: flex-start;
+
+            .header__module {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                align-content: flex-start;
+
+                .title {
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+
+                    &:after {
+                        content: "";
+                        background-color: transparent;
+                    }
+                    
+                    @include heading-section(center, belowline, false, #CCC, currentColor);
+                }
+            }
+
+            .form__module {
+                padding-top: 35px;
+
+                .wis-template-ad {
+                    display: none !important;
+                    visibility: hidden !important;
+                }
+            }
+
+            .jr-insta-thumb {
+                ul {
+                    &.thumbnails {
+                        &.jr_col_4 {
+                            li {
+                                width: 25% !important;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

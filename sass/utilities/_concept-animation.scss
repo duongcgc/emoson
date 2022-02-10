@@ -1,0 +1,134 @@
+// Concept and Design Animation - Interactive
+
+// Zoom
+body.hover-zoom {
+    .featured-posts-wrapper,
+    .featured-categories-wrapper,
+    .post-list-wrapper,
+    .lastest-posts-wrapper,
+    .footer-posts-list {
+        .image,
+        .thumbnail {
+            a,
+            .post-thumbnail {
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    @include effect-zoom-image();
+                }
+            }
+
+            @include effect-hover-border();
+        }
+    }
+}
+
+// Shadow
+body.hover-shadow {
+    .featured-posts-wrapper,
+    .featured-categories-wrapper,
+    .post-list-wrapper,
+    .lastest-posts-wrapper,
+    .footer-posts-list {
+        .image,
+        .thumbnail,
+        .post-thumbnail {
+            a,
+            .post-thumbnail {
+                overflow: hidden;
+                position: relative;
+            }
+
+            @include effect-shadow-image();
+            @include effect-hover-border();
+        }
+    }
+}
+
+// Dark
+body.hover-dark {
+    .featured-posts-wrapper,
+    .featured-categories-wrapper,
+    .post-list-wrapper,
+    .lastest-posts-wrapper,
+    .footer-posts-list {
+        .image,
+        .thumbnail {
+            a,
+            .post-thumbnail {
+                overflow: hidden;
+                position: relative;
+
+                @include effect-dark-image();
+            }
+
+            @include effect-hover-border();
+        }
+    }
+}
+
+.featured-posts-wrapper {
+    .content {
+        .post-name {
+            a {
+                text-decoration: none;
+                @include effect-hover-underline(transparent);
+            }
+        }
+    }
+}
+
+.footer-posts-list {
+    .content {
+        .title {
+            a {
+                text-decoration: none;
+                @include effect-hover-underline(transparent);
+            }
+        }
+    }
+}
+
+.featured-categories-2 {
+    .image {
+        a {
+            display: block;
+            position: relative;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                z-index: 2;
+                transition: all 0.4s;
+            }
+        }
+
+        @include effect-hover-border();
+    }
+
+    .content__module {
+        .category {
+            .content {
+                .categoty-name {
+                    @include heading-section(center, sideline, false, #ccc, $color_active);
+                }
+            }
+        }
+    }
+}
+
+.content {
+    .entry-title {
+        a {
+            text-decoration: none;
+            @include effect-hover-underline(transparent);
+        }
+    }
+}

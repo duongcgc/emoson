@@ -1,0 +1,120 @@
+// Footer 2
+.footer-2 {
+    #colophon {
+        background-color: $color_background_light;
+        color: $color_body_light;
+        padding: 80px 0;
+
+        a {
+            &:hover {
+                color: $color_active;
+            }
+        }
+
+        h3 {
+            font-size: 26px;
+            font-weight: 600;
+            padding: 16px 0;
+        }
+
+        // social icons
+        .footer-social-icons {
+            text-align: left;
+            .social-icon-list {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                grid-gap: 16px;
+                padding: 0;
+            }
+        }
+
+        // footer menu
+        .footer-menu {
+            h3 {
+                padding: 8px 0;
+            }
+
+            #footer-menu {
+                margin: 0 -4px;
+                padding: 0;
+
+                li {
+                    padding: 0 4px;
+
+                    a {
+                        color: #333;
+                        font-size: 16px;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        font-weight: 500;
+                        padding: 0;
+
+                        &:hover {
+                            text-decoration: none;
+                            background: none;
+                            color: $color_active;
+                        }
+
+                        @include effect-hover-underline(transparent);
+                    }
+                }
+            }
+        }
+
+        .footer-main {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: -webkit-fill-available; 
+            align-items: flex-start;
+            
+            @media screen and (max-width: $size-site-md) {
+                padding: 0 15px;
+            }    
+
+            .footer-main-left {
+                width: 100%;
+
+                @media screen and (min-width: $size-site-md) {
+                    width: 50%;
+                    padding-right: 30px;
+                }
+
+                & > div {
+                    padding: 16px 0;
+                }
+            }
+
+            .footer-main-right {
+                width: 100%;
+
+                @media screen and (min-width: $size-site-md) {
+                    width: 50%;
+                }
+
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: -webkit-fill-available;
+                align-items: flex-start;
+                text-align: left;
+
+                & > div {
+                    padding: 16px 0;
+                }
+            }
+        }
+
+        .site-copyright {
+            text-align: center;
+            padding: 30px 60px;
+
+            @media screen and (min-width: $size-site-md) {
+                padding: 60px;
+            }
+        }
+    }
+}

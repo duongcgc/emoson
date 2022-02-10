@@ -1,0 +1,314 @@
+.wp-block {
+   max-width: 720px;
+}
+.wp-block[data-align="wide"] {
+   max-width: 1080px;
+}
+.wp-block[data-align="full"] {
+   max-width: none;
+}
+
+.wp-block-cover,
+.wp-block-cover-image {
+   margin-bottom: 20px;
+} 
+
+.wp-block-verse pre,
+.wp-block-preformatted pre {
+   display: block;
+   padding: 9.5px;
+   margin: 0 0 10px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 13px;
+   line-height: 1.42857143;
+   word-break: break-all;
+   word-wrap: break-word;
+   color: #333;
+   background-color: #f5f5f5;
+}
+
+.wp-block-quote {
+   border-left: 4px solid #ffc000;
+}
+
+.wp-block-quote p {
+   font-style: italic;
+   line-height: 1.6;
+}
+
+.wp-block-quote.is-large .wp-block-quote__citation {
+   text-align: right;
+}
+
+.wp-block-pullquote__citation:before,
+.wp-block-pullquote cite:before,
+.wp-block-quote__citation:before,
+.wp-block-pullquote footer:before {
+   content: "\2014\00a0";
+}
+
+.wp-block-categories ul li {
+   text-align: left;
+}
+
+.wp-block-pullquote__citation,
+.wp-block-pullquote cite,
+.wp-block-pullquote footer {
+   text-transform: capitalize;
+}
+
+.wp-block-pullquote {
+   padding-top: 33px;
+   padding-bottom: 62px;
+}
+
+.wp-block-pullquote.is-style-solid-color {
+   padding-top: 62px;
+}
+
+.wp-block-button {
+   padding: 5px 0;
+}
+
+.wp-block-button__link {
+   border-radius: 0;
+}
+
+.wp-block-gallery {
+   margin-bottom: 20px;
+   ul,
+   ol {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+   }
+}
+
+.wp-block-gallery {
+   .blocks-gallery-grid {
+      margin-left: 0;
+   }
+}
+
+.wp-block-latest-comments__comment {
+   font-size: 13px;
+}
+
+.wp-block-image {
+   // overflow: auto;
+}
+
+.wp-block-latest-posts {
+   li {
+      padding: 5px 0;
+
+      a {
+         display: block;
+      }
+   }
+}
+
+/////////////////////////////////////
+
+#editor {
+   .editor-styles-wrapper {
+      .wp-block {
+         line-height: 1.8;
+         font-family: "Poppins";
+         font-size: 16px;
+         color: #28293D;
+      }
+
+      .wp-block-heading,
+      .editor-post-title__input {
+         margin-bottom: 15px;
+         font-family: "Playfair Display";
+         font-style: normal;
+         font-weight: 400;
+         font-size: 42px;
+         color: #000000;
+      }
+
+      h1.wp-block-heading {
+         font-size: 42px;
+      }
+
+      h2.wp-block-heading {
+         font-size: 31px;
+      }
+
+      h3.wp-block-heading {
+         font-size: 25px;
+      }
+
+      h4.wp-block-heading {
+         font-size: 20px;
+      }
+
+      h5.wp-block-heading {
+         font-size: 16px;
+      }
+
+      h6.wp-block-heading {
+         font-size: 12px;
+      }
+
+      pre {
+         background: #eee;
+         margin-bottom: 1.6em;
+         overflow: auto;
+         padding: 1.6em;
+      }
+
+      .wp-block-table td, .wp-block-table th {
+         padding: .5em;
+         border: 1px solid;
+         word-break: normal;
+         line-height: 1.9;
+         font-family: "Montserrat";
+         font-size: 16px;
+         color: #28293D;
+      }
+
+      .wp-block-latest-posts {
+         padding-left: 30px;
+
+         li {
+            list-style: disc;
+            margin-bottom: 20px;
+            padding: 0;
+         }
+
+         a {
+            color: #333;
+         }
+      }
+
+      .wp-block-pullquote {
+         border-top: 1px solid #828282;
+         border-bottom: 1px solid #828282;
+      }
+
+      .wp-block-pullquote,
+      .wp-block-quote {
+         border-left: none;
+         padding-left: 0;
+         font-size: 32px;
+         color: #28293D;
+         font-style: normal;
+         text-align: center;
+         font-family: "Playfair Display";
+         
+         &:before {
+            content: url(../images/icon-01.svg);
+            display: block;
+            margin-bottom: 10px;
+         }
+
+         p {
+            font-style: normal;
+            font-size: 25px;
+            margin-bottom: 0;
+         }
+         
+         .wp-block-pullquote__citation,
+         cite {
+            font-size: 13px;
+            display: inline-block;
+            font-family: "Montserrat";
+            text-transform: uppercase;
+            text-align: center;
+         }
+
+         // &.alignleft,
+         // &.alignright {
+         //    border: none;
+         // }
+      }
+
+      figure {
+         &.wp-block-audio {
+            figcaption a,
+            figcaption {
+               margin: 0;
+               text-align: left;
+               font-size: 13px;
+               line-height: 21px;
+               text-transform: uppercase;
+               color: #828282;
+            }
+         }
+
+         figcaption a,
+         figcaption {
+            margin: 0;
+            text-align: left;
+            font-size: 13px;
+            line-height: 21px;
+            text-transform: uppercase;
+            color: #828282;
+         }
+      }
+
+      .wp-block-button__link {
+         background: #000000;
+         padding: 10px 20px;
+         color: #fff;
+         text-transform: uppercase;
+         font-size: 16px;
+         font-weight: 500;
+      }
+
+      a {
+         color: #28293D;
+      }
+
+      .wp-block-cover-image,
+      .wp-block-cover {
+         .has-large-font-size {
+            font-size: 36px;
+         }
+
+         .wp-block-paragraph {
+            width: 100%;
+            z-index: 1;
+            color: #fff;
+         }
+      }
+
+      .wp-block-media-text .wp-block-media-text__content p:first-child {
+         font-family: "Playfair Display";
+         font-size: 32px;
+         color: #000;
+         margin-bottom: 10px;
+      }
+
+      .block-editor-warning, 
+      .block-editor-warning .block-editor-warning__message {
+         font-family: "Montserrat";
+      }
+
+      .block-editor-block-list__block,
+      .wp-block-image,
+      .wp-block-gallery {
+         max-width: 720px;
+         margin-left: auto;
+         margin-right: auto;
+      }
+
+      .wp-block {
+         &[data-align=left] {
+            > * {
+               margin-right: 20px;
+            }
+         }
+         
+         &[data-align=right] {
+            > * {
+               margin-left: 20px;
+            }
+         }
+      }
+   }
+}

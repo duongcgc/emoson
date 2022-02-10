@@ -1,0 +1,43 @@
+/* Layout content no sidebar */
+
+.no-sidebar {
+	.site-content {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-areas:
+			"header"
+			"main"
+			"footer";
+		justify-content: center;
+
+		@media screen and (min-width: $size-site-md) {
+			@include container_boxed();			
+		}
+	}
+
+	&.single {
+		.site-content {
+			@media screen and (min-width: $size-site-md) {
+				@include container_boxed();
+				
+				grid-template-columns: $size__site-single;
+			}
+		}
+	}
+
+	// On Home Boxed Layout
+	&.gcod-home-boxed {
+		.site-content {		
+			@include container_boxed();	
+			grid-template-columns: 100%;
+		}		
+	} 
+
+	// On Home Page Fullwidth Layout
+	&.gcod-home-fluid {
+		.site-content {		
+			@include container_fluid();	
+			grid-template-columns: 100%;
+		}		
+	} 
+}

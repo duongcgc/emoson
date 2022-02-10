@@ -1,0 +1,33 @@
+// Concept Sets
+
+.concept-1 {
+
+    .header-6 {
+        #masthead {
+            .inner-header {
+                .site-menu {
+                    &::after {
+                        bottom: 15px;
+                    }
+                }
+                .site-tools {
+                    &::before {
+                        bottom: -8px;
+                    }
+                    &::after {
+                        bottom: -10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .post-button {
+        .wp-block-button__link {
+            border-radius: 0;
+            font-size: 16px;
+            padding: 10px 23px;
+        }
+    }
+
+}

@@ -1,0 +1,29 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    span {
+        font-size: 13px;
+        color: white;
+        transition: all 0.4s;
+
+        &[property='itemListElement'] {
+            padding: 0 5px;
+        }
+    }
+
+    a {
+        &:hover {
+            span {
+                text-decoration: underline;
+                color: $color_active;
+                transition: all 0.4s;
+            }
+        }
+    }
+
+    .current-item {
+        font-weight: 600;
+        color: $color_active;
+    }
+}

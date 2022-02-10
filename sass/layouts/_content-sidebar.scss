@@ -1,0 +1,79 @@
+/* Layout content right sidebar */
+
+#primary {
+	@include bgcolor(0.5);
+	margin-right: 30px;
+
+	article {
+		@include bgcolor(0.2);
+		padding-bottom: 20px;
+		border-bottom: solid 1px #ccc;
+		margin-bottom: 60px;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+
+.right-sidebar {
+	.site-content {
+		// mobile
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-areas:
+			"header"
+			"main"
+			"sidebar"
+			"footer";
+
+		// desktop
+		@media screen and (min-width: $size-site-md) {
+			grid-template-columns: ($size__site-main) ($size__site-sidebar);
+			grid-template-areas:
+				"header header"
+				"main sidebar"
+				"footer footer";
+			justify-content: center;
+
+			#secondary {
+				margin-left: 0;
+			}
+
+			@media screen and (min-width: $size-site-md) {
+				@include container_boxed();
+			}
+		}
+	}
+}
+
+
+// sticky sidebar
+
+#secondary {
+	transition: all 0.4s;
+}
+
+.fixed-sidebar {
+	position: fixed;
+	transition: all 0.4s;
+}
+
+.site-header {
+	grid-area: header;
+}
+
+.site-main {
+	grid-area: main;
+	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.widget-area {
+	grid-area: sidebar;
+}
+
+.site-footer {
+	grid-area: footer;
+}
+
+@import "no-sidebar";

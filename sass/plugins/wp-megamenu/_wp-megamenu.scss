@@ -1,0 +1,513 @@
+.header-2 {
+    #wp-megamenu-main-menu {
+        & > .wpmm-nav-wrap {
+            ul {
+                &.wp-megamenu {
+                    & > li {
+                        &.wpmm_mega_menu {
+                            & > ul {
+                                &.wp-megamenu-sub-menu {
+                                    @media screen and (max-width: $size-site-md) {
+                                        background-color: black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #wp-megamenu-main-menu {
+        &.wp-megamenu-wrap {
+            @media screen and (max-width: $size-site-md) {
+                .wpmm-nav-wrap {
+                    > ul {
+                        > li {
+                            &.wpmm-social-link {
+                                &.wpmm-social-link-search {
+                                    a {
+                                        padding: 5px 5px 15px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.wpmm-mobile-menu {
+                & > .wpmm-nav-wrap {
+                    ul {
+                        &.wp-megamenu {
+                            & > li {
+                                & > a {
+                                    @media screen and (max-width: $size-site-md) {
+                                        padding: 10px 0;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .wp-megamenu-sub-menu {
+                li {
+                    @media screen and (max-width: $size-site-md) {
+                        padding: 2px 0;
+
+                        a {
+                            padding: 0;
+                        }
+
+                        li {
+                            > a {
+                                padding: 5px 0;
+                            }
+                        }
+                    }
+                }
+
+                .posts__module {
+                    .post-cat {
+                        @media screen and (max-width: $size-site-md) {
+                            padding: 0 15px;
+
+                            a {
+                                @include heading-section(left, sideline, false, white, $color_active);
+                            }
+                        }
+                    }
+
+                    .content {
+                        .post-meta {
+                            @media screen and (max-width: $size-site-md) {
+                                padding: 0 15px;
+
+                                a {
+                                    @include effect-hover-underline-1px();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#menu-main-menu {
+    &.wp-megamenu {
+        .wpmm_mega_menu {
+            .wp-megamenu-sub-menu {
+                padding: 10px;
+
+                @media screen and (max-width: $size-site-md) {
+                    padding: 0;
+                }
+
+                .wpmm-col:first-child {
+                    width: 15%;
+                }
+
+                .wpmm-col:last-child {
+                    width: 85%;
+                }
+
+                .posts__widget {
+                    display: flex;
+
+                    @media screen and (max-width: $size-site-md) {
+                        flex-wrap: wrap;
+                    }
+
+                    &.style-04 {
+                        .item {
+                            .post {
+                                .image {
+                                    padding-bottom: 10px;
+                                }
+                                .post-cat {
+                                    a {
+                                        text-transform: uppercase;
+                                        &::before,
+                                        &::after {
+                                            display: none;
+                                            content: "";
+                                            background-image: none;
+                                            background-color: transparent;
+                                        }
+                                    }
+                                }
+
+                                .content {
+                                    .post-name {
+                                        a {
+                                            font-weight: 600;
+                                            font-size: 16px;
+                                            line-height: 24px;
+                                            transition: all 0.4s;
+
+                                            &:hover {
+                                                text-decoration: underline;
+                                                color: $color-active;
+                                                transition: all 0.4s;
+                                            }
+                                        }
+                                    }
+
+                                    .post-meta {
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        flex-wrap: nowrap;
+                                        align-items: center;
+                                        align-content: center;
+
+                                        li {
+                                            padding: 0;
+                                            margin: 0;
+                                            &::after {
+                                                content: "";
+                                                display: none;
+                                            }
+                                        }
+
+                                        a,
+                                        span {
+                                            font-size: 13px;
+                                            text-transform: uppercase;
+                                            color: #333;
+                                            display: block;
+                                            padding: 0;
+                                            margin: 0;
+
+                                            display: flex;
+                                            justify-content: flex-start;
+                                            align-items: center;
+                                            align-content: center;
+
+                                            &::after {
+                                                content: "";
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Header 2
+.header-2 {
+    .wpmm-mobile-menu {
+        a {
+            &.wpmm_mobile_menu_btn {
+                @media screen and (max-width: $size-site-md) {
+                    color: white !important;
+                }
+            }
+        }
+    }
+
+    #menu-main-menu {
+        &.wp-megamenu {
+            background-color: black;
+
+            @media screen and (max-width: $size-site-md) {
+                position: relative;
+                left: -25px;
+                width: calc(100% + 55px);
+                z-index: 0;
+            }
+
+            .wpmm_mega_menu {
+                .wp-megamenu-sub-menu {
+                    .posts__module {
+                        .post-cat {
+                            &::before,
+                            &::after {
+                                display: none;
+                            }
+                            a {
+                                padding: 0;
+                                margin: 0;
+                            }
+
+                            margin-bottom: 10px;
+                        }
+
+                        .post-name {
+                            a {
+                                color: #333;
+                            }
+                        }
+
+                        .post-meta {
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            align-content: flex-start;
+
+                            li {
+                                margin-left: 0;
+                                padding-left: 0 !important;
+
+                                display: flex;
+                                align-content: flex-start;
+                                align-items: flex-start;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Header 6
+.header-6 {
+    @media screen and (max-width: $size-site-md) {
+        .wp-megamenu-wrap {
+            &.wpmm-mobile-menu {
+                ul {
+                    &.wp-megamenu {
+                        border: solid 1px #ccc;
+                        left: -35px;
+                        width: calc(100% + 70px);
+                        top: 60px;
+                    }
+                }
+            }
+
+            .wpmm-nav-wrap {
+                & > ul {
+                    &.wp-megamenu {
+                        & > li {
+                            &.wpmm_dropdown_menu {
+                                ul {
+                                    &.wp-megamenu-sub-menu {
+                                        box-shadow: none;
+                                        background-color: #fff !important;
+
+                                        a {
+                                            &:hover {
+                                                @include effect-hover-underline-1px();
+                                            }
+                                        }
+                                    }
+
+                                    li {
+                                        .menu-item-has-children {
+                                            & > {
+                                                ul {
+                                                    &.wp-megamenu-sub-menu {
+                                                        background-color: #fff !important;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .wp-megamenu-wrap {
+        .wpmm-nav-wrap {
+            & > ul {
+                @media screen and (max-width: $size-site-md) {
+                    & li {
+                        a {
+                            padding: 0;
+                        }
+                    }
+
+                    & > li {
+                        & > a {
+                            padding: 5px 0;
+                        }
+                    }
+                }
+
+
+                &.wp-megamenu {
+                    & > li {
+                        &.wpmm_dropdown_menu {
+                            ul {
+                                &.wp-megamenu-sub-menu {
+                                    background-color: #fff !important;
+                                    transition: all 0.4s;
+                                }
+                            }
+
+                            @media screen and(max-width:$size-site-md) {
+                                ul {
+                                    &.wp-megamenu-sub-menu {
+                                        display: none;
+                                        visibility: hidden;
+                                        transition: all 0.4s;
+                                    }
+                                }
+
+                                &.focus {
+                                    > ul {
+                                        &.wp-megamenu-sub-menu {
+                                            display: block;
+                                            visibility: visible;
+                                            transition: all 0.4s;
+                                            padding: 0;
+
+                                            li {
+                                                padding: 0;
+                                            }
+                                        }
+                                    }
+
+                                    .wp-megamenu-sub-menu {
+                                        li {
+                                            a {
+                                                .fa-angle-down {
+                                                    margin-top: 8px;
+                                                }
+                                            }
+                                        }
+
+                                        .wpmm-submenu-right {
+                                            .wp-megamenu-sub-menu {
+                                                margin-top: -8px;
+                                                display: none;
+                                                visibility: hidden;
+                                                transition: all 0.4s;
+                                            }
+
+                                            &.focus {
+                                                .wp-megamenu-sub-menu {
+                                                    display: block;
+                                                    visibility: visible;
+                                                    transition: all 0.4s;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                ul {
+                                    .wp-megamenu-sub-menu {
+                                        li {
+                                            > a {
+                                                padding: 10px 15px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #wp-megamenu-main-menu {
+        & > .wpmm-nav-wrap {
+            ul.wp-megamenu {
+                & > li {
+                    &:hover {
+                        & > a {
+                            color: $color_active !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #menu-main-menu {
+        &.wp-megamenu {
+            .wpmm_mega_menu {
+                .wp-megamenu-sub-menu {
+                    padding: 0;
+
+                    .wpmm-col:first-child {
+                        width: 20%;
+                    }
+
+                    .wpmm-col:last-child {
+                        width: 80%;
+                    }
+
+                    .posts__module {
+                        .post-cat {
+                            &::before,
+                            &::after {
+                                display: none;
+                            }
+                            a {
+                                padding: 0;
+                                margin: 0;
+                            }
+
+                            margin-bottom: 10px;
+                        }
+
+                        .post-meta {
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            align-content: flex-start;
+
+                            li {
+                                margin-left: 0;
+                                padding-left: 0 !important;
+
+                                display: flex;
+                                align-content: flex-start;
+                                align-items: flex-start;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile Menu
+@media screen and (max-width: $size-site-md) {
+    .wpmm-nav-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: flex-start;
+
+        .wpmm_mobile_menu_btn {
+            margin: 0 !important;
+            padding: 0 !important;
+            z-index: 999999;
+        }
+
+        .wpmm_brand_logo_wrap {
+            max-width: 30% !important;
+        }
+    }
+
+    .wp-megamenu-sub-menu {
+        .wpmm-col {
+            width: 100% !important;
+
+            .post-meta {
+                width: 100%;
+            }
+        }
+    }
+}

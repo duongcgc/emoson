@@ -1,0 +1,28 @@
+/* Inherit box-sizing to more easily change it's value on a component level.
+@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	box-sizing: border-box;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+.quick_guide_setting {	
+    border: solid 1px #BDBDBD;
+	background-color: #fff;
+	max-width: 350px;
+	padding: 15px;
+	position: fixed;
+	top: 50px;
+	left: 15px;
+	line-height: 1.25;
+	z-index: 99999;
+
+	h5 {
+		margin-bottom: 15px;
+	}
+}

@@ -1,0 +1,102 @@
+// Concept and Design by Typography
+
+.page-title-1 {
+}
+
+.page-title-2 {
+
+    .header-wrapper {
+        .main-navigation {
+            #primary-menu {
+                & > li {
+                    a {
+                        font-family: $font__body;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $font__body;
+    }
+
+    .featured-slider-content {
+        .post-cat {
+            a {
+                font-family: $font__body;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .posts__module {
+        .post-meta {
+            font-family: $font__body;
+            text-transform: uppercase;            
+        }
+    }
+
+    .featured-posts-wrapper {
+        .featured-posts-content {
+            .content__module {
+                .post-cat {
+                    a {
+                        font-family: $font__body;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
+    .post-list-wrapper {
+        .archive-wrapper {
+            .content__module {
+                .post-meta {
+                    a {
+                        font-family: $font__body;
+                        text-transform: uppercase;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    .post-list-wrapper {
+        .archive-wrapper {
+            .content__module {
+                .post-cat {
+                    a {
+                        font-family: $font__body;
+                        text-transform: uppercase;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    .widget {
+        .posts__widget {            
+            .post-meta,
+            .post-cat {
+                a {
+                    font-family: $font__body;
+                }                
+            }
+            .post-name {
+                a {
+                    font-family: $font__body;                    
+                }                
+            }
+        }
+    }
+}

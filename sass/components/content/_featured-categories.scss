@@ -1,0 +1,188 @@
+.featured-categories-wrapper {
+    &.categories-fullwidth {
+        @include container_fluid();
+    }
+    &.categories-boxed {
+        .inner-featured-categories {
+            @include container_boxed();
+        }
+    }
+
+    @media screen and (max-width: $size-site-md) {
+        margin-bottom: 65px;
+    }
+
+    .featured-categories-content {
+        .header__module {
+            padding: 0 15px 5px;
+
+            // on desktop
+            @media screen and (min-width: $size-site-md) {
+                padding: 40px 0 30px;
+            }
+
+            .title {
+                @include heading-section-line();
+
+                a {
+                    color: #000;
+                    transition: all 0.4s;
+
+                    &:hover {
+                        color: $color_active;
+                    }
+
+                    &::after {
+                        content: "";
+                    }
+                }
+            }
+        }
+
+        .categoty-name {
+            a {
+                color: #fff;
+                transition: all 0.4s;
+                &:hover {
+                    color: $color_active;
+                }
+            }
+        }
+
+        .content__module {
+            padding: 0 5px;
+
+            // on desktop
+            @media screen and (min-width: $size-site-md) {
+                padding: 0;
+                margin-left: -10px;
+                margin-right: -10px;
+            }
+
+            .slick-slider {
+                margin: auto;
+                display: flex;
+
+                .slick-slide {
+                    & > div {
+                        padding: 18px 0;
+                        .item { 
+                            width: 25%;
+                        }
+                    }
+                }
+                
+            }
+           
+        }
+    }
+}
+
+// Categories 1
+.featured-categories-1 {
+    .content__module {
+        .category {
+            overflow: hidden;
+            .image {
+                max-height: 295px;
+                overflow: hidden;
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        .content {
+            .categoty-name {
+                @include heading-section(center, sideline, false, white, white);
+                a {
+                    text-shadow: 1px 1px 1px #333;
+                }
+            }
+        }
+
+        .slick-slider {
+            margin: auto;
+            display: flex;
+
+            .item {
+                width: 25%;
+            }
+        }
+    }
+}
+
+// Categories 2
+.featured-categories-2 {
+    padding: 0;
+
+    .slick-list {
+        height: 300px !important;
+    }
+
+    @media screen and (max-width: $size-site-md) {
+        padding: 40px 0;
+
+        .slick-list {
+            height: 310px !important;
+        }
+    }
+
+    .content__module {
+        .category {
+            display: flex;
+            justify-content: center;
+            .image {
+                display: inline-block;
+                width: 70%;
+                height: 70%;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            .content {
+                bottom: -60px;
+                .categoty-name {
+                    display: flex;
+                    align-items: center;
+                    font-family: $font__body;
+                    font-size: 24px;
+
+                    a {
+                        color: #333;
+                    }
+
+                    // @include heading-pattern-black;
+                    @include heading-section(center, sideline, false, #ccc, $color_active);
+                }
+            }
+        }
+    }
+}
+
+// Featured Inside Primary
+#primary {
+    .featured-categories-content {
+        .header__module {
+            padding: 15px 0;
+        }
+
+        .content__module {
+            padding-bottom: 30px;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+}
+
+.header-2 {
+    .featured-sections {
+        .inner-featured-content {
+            .featured-categories-2 {
+                @media screen and (max-width: $size-site-md) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

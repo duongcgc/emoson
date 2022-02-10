@@ -1,0 +1,228 @@
+// header-6
+.header-6 {
+    &.darkmode {
+        background-color: $color_background_dark;
+
+        .wp-megamenu-wrap {
+            .wpmm-nav-wrap {
+                > {
+                    ul {
+                        > {
+                            li {
+                                > {
+                                    a {
+                                        color:$color_body_dark;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .wp-megamenu-item-wpmm-search-icon {
+            .wpmm-search {
+                &.search-open-icon {
+                    color: $color_body_dark;
+                }
+            }
+        }
+    }
+
+    .site-header {
+        margin-bottom: 10px;
+    }
+
+    .wp-megamenu-item-wpmm-search-icon {
+        .wpmm-search {
+            &.search-close-icon {
+                display: none !important;
+            }
+        }
+    }
+
+    #masthead {
+        .inner-header {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            @include container_boxed();
+
+            // On Mobile & tablet
+            @media screen and (max-width: $size-site-md) {
+                display: block;
+            }            
+
+            // PC
+            @media screen and (min-width: $size-site-md) {
+                align-items: center;
+                display: flex;
+                grid-template-areas: "mainmenu toolbox";
+                grid-template-columns: 70% 30%;
+
+                .site-menu {
+                    &::before,
+                    &::after {
+                        content: none !important;
+                        background-color: transparent;
+                    }
+                }
+
+                .main-navigation {
+                    #primary-menu {
+                        background-color: transparent;
+                    }
+
+                    #wp-megamenu-main-menu {
+                        width: 100%;
+
+                        .wpmm_dropdown_menu,
+                        .wpmm_mega_menu {
+                            a {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                align-content: center;
+
+                                .fa {
+                                    padding-left: 5px;
+                                }
+                            }
+                        }
+
+                        .wp-megamenu-sub-menu {
+                            a {
+                                .fa {
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+
+                        .current-menu-item {
+                            @include current_wp_megamenu();
+                        }
+
+                        & > .wpmm-nav-wrap {
+                            ul {
+                                &.wp-megamenu {
+                                    display: flex;
+                                    justify-content: right;
+                                    align-items: center;
+                                    align-content: center;
+
+                                    .wpmm_dropdown_menu {
+                                        .wp-megamenu-sub-menu {
+                                            padding: 5px 10px;
+                                        }
+                                    }
+                                }
+
+                                & > li {
+                                    ul {
+                                        &.wp-megamenu-sub-menu {
+                                            li {
+                                                padding: 5px 10px;
+
+                                                a {
+                                                    color: #000;
+                                                    font-weight: 400;
+                                                    padding: 0;
+                                                    display: inline;
+
+                                                    &:hover {
+                                                        color: $color-active;
+                                                        text-decoration: underline;
+                                                        text-underline-position: under;
+                                                        transition: all 0.4s;
+                                                    }
+
+                                                    // @include effect-hover-underline(transparent);
+                                                }
+
+                                                &.current-menu-item {
+                                                    &::after {
+                                                        display: none !important;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .site-menu {
+                    grid-area: mainmenu;
+                }
+                .site-branding {
+                    grid-area: mainlogo;
+                    .gcod_logo {
+                        position: relative;
+                        top: 40px;
+                    }
+                }
+                .site-tools {
+                    grid-area: toolbox;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: flex-end;
+                    align-content: flex-start;
+                    align-items: flex-start;
+                    align-self: flex-start;
+                    margin-top: 10px;
+                    position: relative;
+
+                    @media screen and (max-width: $size-site-lg) {
+                        justify-content: center;
+                        align-content: center;
+                        align-items: center;
+                        align-self: center;
+                    }
+                }
+            }
+
+            // On Tablet
+            @media screen and (min-width: $size-site-md) and (max-width: $size-site-lg) {
+
+                display: block;
+
+                .wpmm_brand_logo_wrap {
+                    float: inherit;
+                }
+            }
+        }
+    }
+
+    .featured-sections {
+        margin-bottom: 25px;
+
+        .inner-featured-content:empty {
+            margin-bottom: 65px;
+        }
+    }
+
+    .site-content {
+        .post-list-wrapper {
+            .header__module {
+                padding-top: 0;
+
+                .title {
+                    a {
+                        &::after {
+                            content: "";
+                        }
+                    }
+
+                    @include heading-section-line();
+                }
+            }
+        }
+    }
+}

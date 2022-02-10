@@ -1,0 +1,14 @@
+/* Customizer Control Styles */
+
+#customize-controls {
+   .customize-pane-child {
+      .customize-section-title h3 {
+         font-weight: bold;
+      }
+   }
+}
+
+.customizer-partial-refreshing {
+   opacity: 0 !important;
+   transition: opacity 0.5s !important;
+}

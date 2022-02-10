@@ -1,0 +1,714 @@
+// Center block
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+    width: map-get($columns, $numberColumns) - (($columns__margin * ($numberColumns - 1)) / $numberColumns);
+}
+
+// Gray color by percent
+@mixin bgcolor($percent: 0.5) {
+    // background-color: rgba(0, 0, 0, $percent);
+}
+
+// Light color by percent
+@mixin bgcolor-light($percent: 0.5) {
+    background-color: rgba(255, 255, 255, $percent);
+}
+
+// Container Responsive =================================
+@mixin container_boxed {
+    @media screen and (min-width: $size-site-md) {
+        max-width: $size-site-md - 40px;
+        margin: auto;
+    }
+
+    @media screen and (min-width: $size-site-lg) {
+        max-width: $size-site-xxl - 40px;
+        margin: auto;
+    }
+
+    @media screen and (min-width: $size-site-xl) {
+        max-width: $size-site-xl - 40px;
+        margin: auto;
+    }
+
+    @media screen and (min-width: $size-site-xxl) {
+        max-width: $size-site-xxl - 40px;
+        margin: auto;
+    }
+
+    @media screen and (min-width: $size-site-xxxl) {
+        max-width: $size-site-xxxl - 40px;
+        margin: auto;
+    }
+}
+
+// Container Fluid ===============================
+@mixin container_fluid {
+    @media screen and (min-width: $size-site-md) {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    @media screen and (min-width: $size-site-lg) {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    @media screen and (min-width: $size-site-xl) {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    @media screen and (min-width: $size-site-xxl) {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    @media screen and (min-width: $size-site-xxxl) {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+// Social Icons with image ========================
+@mixin social-icon($iconName: facebook) {
+    a[aria-label="#{$iconName}"] {
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        background-image: url("./assets/images/#{$iconName}-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 16px auto;
+        border: solid 1px #333;
+        transition: all 0.4s;
+        border-radius: 30px;
+
+        &:hover {
+            border: solid 1px $color-active;
+            transition: all 0.4s;
+        }
+    }
+}
+
+// Social Icons with image white
+@mixin social-icon-white($iconName: facebook) {
+    a[aria-label="#{$iconName}"] {
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        background-image: url("./assets/images/#{$iconName}-icon-white.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        border: solid 1px #dedede;
+        transition: all 0.4s;
+        border-radius: 30px;
+
+        &:hover {
+            border: solid 1px $color-active;
+            transition: all 0.4s;
+        }
+    }
+}
+
+// Zoom Image Effect =================== (Apply to Thumbanail Image)
+@mixin effect-zoom-image() {
+    display: block;
+    transform: scale(1, 1);
+    transition: transform 0.4s;
+
+    &:hover {
+        transform: scale(1.05, 1.05);
+        transition: transform 0.4s;
+    }
+}
+
+// Dark Image Effect =================== (Apply to Thumbanail Image Wrapper)
+@mixin effect-dark-image() {
+    display: block;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(153, 82, 31, 0);
+        transition: all 0.4s;
+    }
+
+    &:hover {
+        &::before {
+            background: rgba(153, 82, 31, 0.4);
+            transition: all 0.4s;
+        }
+    }
+}
+
+// Shadow Image Effect =================== (Apply to Thumbanail Image)
+@mixin effect-shadow-image() {
+    display: block;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0);
+    transition: all 0.4s;
+
+    &:hover {
+        box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+        transition: all 0.4s;
+    }
+}
+
+// Hover Border ========================= (Apply to Thumbnail)
+@mixin effect-hover-border {
+    display: block;
+    border: solid 1px transparent;
+    transition: all 0.8s;
+
+    &:hover {
+        border: solid 1px $color_active;
+        transition: all 0.8s;
+    }
+}
+
+// Underline Effect ========================== (Apply to Heading Article)
+@mixin effect-hover-underline($color: transparent) {
+    box-shadow: 0 -1px 0 0 $color inset, 0 -1px 0 0 transparent inset;
+    transition: all 0.4s;
+
+    &:hover {
+        box-shadow: 0 -1px 0 0 $color inset, 0 -1px 0 0 $color_active inset;
+        transition: all 0.4s;
+    }
+}
+
+// Effect Underline on Hover
+@mixin effect-hover-underline-1px {
+    &:hover {
+        color: #99521f;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-position: under;
+        transition: all 0.4s;
+    }
+}
+
+// Heading Section Line ======================== (Apply to Large Heading and Left Align)
+@mixin heading-section-line {
+    
+    overflow: hidden;
+
+    * {
+        position: relative;
+        display: inline-block;
+    }
+
+    *::after {
+        content: "";
+        width: 0%;
+        height: 1px;
+        display: block;
+        background-color: #99521f;
+        position: absolute;
+        left: 100%;
+        top: calc(50% - 1px);
+        z-index: 3;        
+        transition: width 1s ease-in-out;        
+    }
+
+    *:hover {        
+        &::after {
+            width: 1200px;
+            height: 1px;
+            transition: width 1s ease-in-out;
+        }
+    }
+
+    &::after {
+        background-color: #dedede;
+        position: static;
+    }    
+}
+
+// Heading Section - Small Title ========================================
+// @align: left / center / right
+// @style: sideline / underline / boxline
+@mixin heading-section($align, $style, $boxround, $color, $textcolor) {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    white-space: nowrap;
+    color: $textcolor;
+
+    @if ($style == sideline) {
+        @if $align == left {
+            justify-content: flex-start;
+
+            &::after {
+                content: "";
+                background-color: $color;
+                display: inline-block;
+                margin-left: 10px;
+                width: 30px;
+                height: 1px;
+                position: relative;
+            }
+
+            &:hover {
+                * {
+                    color: $textcolor;
+                    transition: all 0.4s;
+                }
+
+                &::after,
+                &::before {
+                    background-color: $color_active;
+                    transition: all 0.4s;
+                }
+            }
+        }
+        @elseif $align == right {
+            justify-content: flex-end;
+
+            &::before {
+                content: "";
+                background-color: $color;
+                display: inline-block;
+                margin-right: 10px;
+                width: 30px;
+                height: 1px;
+                position: relative;
+            }
+        }
+        @elseif $align == center {
+            justify-content: center;
+
+            &::before {
+                content: "";
+                background-color: $color;
+                display: inline-block;
+                margin-right: 10px;
+                width: 30px;
+                height: 1px;
+                position: relative;
+            }
+
+            &::after {
+                content: "";
+                background-color: $color;
+                display: inline-block;
+                margin-left: 10px;
+                width: 30px;
+                height: 1px;
+                position: relative;
+            }
+
+            // Hover
+
+            * {
+                color: currentColor;
+                transition: all 0.4s;
+
+                &:hover {
+                    color: $color_active;
+                    transition: all 0.4s;
+                }
+            }
+
+            &::after,
+            &::before {
+                background-color: $color;
+                transition: all 0.4s;
+            }
+
+            &:hover {
+                * {
+                    color: $color_active;
+                    transition: all 0.4s;
+                }
+
+                &::after,
+                &::before {
+                    background-color: $color_active;
+                    transition: all 0.4s;
+                }
+            }
+        }
+    }
+    @elseif $style == underline {
+        text-decoration: none;
+        transition: all 0.4s;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-position: under;
+            transition: all 0.4s;
+        }
+    }
+    @elseif $style == belowline {
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        @if $align == left {
+            justify-content: flex-start;
+        }
+        @elseif $align == center {
+            justify-content: center;
+        }
+        @elseif $align == right {
+            justify-content: space-between;
+            text-align: right;
+
+            * {
+                width: 100%;
+            }
+
+            &::after {
+                align-self: flex-end;
+            }
+        }
+
+        &::after {
+            content: "";
+            background-color: $color;
+            bottom: -20px;
+            width: 30px;
+            height: 1px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+    }
+    @elseif $style == downline {
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        @if $align == left {
+            justify-content: flex-start;
+        }
+        @elseif $align == center {
+            justify-content: center;
+        }
+        @elseif $align == right {
+            justify-content: space-between;
+            text-align: right;
+
+            * {
+                width: 100%;
+            }
+
+            &::after {
+                align-self: flex-end;
+            }
+        }
+
+        &::after,
+        &::before {
+            content: "";
+            background-color: $color;
+            bottom: -20px;
+            width: 1px;
+            height: 30px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        &::before {
+            top: 54px;
+            background-color: $color_active;
+            height: 0;
+            position: absolute;
+            z-index: 999;
+            transition: all 0.8s;
+        }
+
+        // Hover
+        &:hover {
+            &::before {
+                height: 32px;
+                transition: all 0.8s;
+            }
+        }
+    }
+    @elseif $style == boxline {
+        margin-bottom: 20px;
+
+        @if $align == left {
+            justify-content: flex-start;
+        }
+        @elseif $align == center {
+            justify-content: center;
+            text-align: center;
+        }
+        @elseif $align == right {
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        &::after {
+            content: "";
+            background-color: transparent;
+            margin-left: 0;
+            width: 0;
+            height: 0;
+        }
+
+        * {
+            padding: 5px 15px;
+        }
+
+        @if $boxround {
+            * {
+                border-radius: 100px;
+                padding: 5px 20px;
+            }
+        }
+
+        // Hover
+
+        * {
+            border: solid 1px $color;
+            text-transform: uppercase;
+            display: inline-block;
+            color: currentColor;
+            transition: all 0.4s;
+        }
+
+        &:hover {
+            * {
+                color: $color_active;
+                transition: all 0.4s;
+                border-color: $color_active;
+                transition: all 0.4s;
+            }
+        }
+    }
+
+    @elseif $style == boxcolor {
+        margin-bottom: 20px;
+
+        @if $align == left {
+            justify-content: flex-start;
+        }
+        @elseif $align == center {
+            justify-content: center;
+            text-align: center;
+        }
+        @elseif $align == right {
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        &::after {
+            content: "";
+            background-color: transparent;
+            margin-left: 0;
+            width: 0;
+            height: 0;
+        }
+
+        * {
+            padding: 5px 15px;
+        }
+
+        @if $boxround {
+            * {
+                border-radius: 100px;
+                padding: 5px 20px;
+            }
+        }
+
+        // Hover
+
+        * {
+            border: solid 1px $color_active;
+            background-color: $color_active;
+            text-transform: uppercase;
+            display: inline-block;
+            color: white;
+            transition: all 0.4s;
+        }
+
+        &:hover {
+            * {
+                color: $color_active;
+                transition: all 0.4s;
+                border-color: $color_active;
+                background-color: transparent;
+                transition: all 0.4s;
+            }
+        }
+    }
+}
+
+// Heading Sidebar - Footer Section ==============================
+// @align: left / center / right
+// @style: sideline / underline / boxline
+@mixin heading-widget($align, $style, $boxround, $color) {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    white-space: nowrap;
+
+    @if $style == sideline {
+        @if $align == left {
+            justify-content: flex-start;
+
+            &::after {
+                content: "";
+                background-color: $color;
+                display: inline-block;
+                margin-left: 10px;
+                width: 100%;
+                height: 1px;
+                position: relative;
+            }
+        }
+        @elseif $align == right {
+            justify-content: flex-end;
+
+            &::before {
+                content: "";
+                background-color: $color;
+                display: inline-block;
+                margin-right: 10px;
+                width: 100%;
+                height: 1px;
+                position: relative;
+            }
+        }
+        @elseif $align == center {
+            justify-content: center;
+
+            &::before {
+                content: "";
+                background-color: $color;
+                display: inline-block;
+                margin-right: 10px;
+                width: 100%;
+                height: 1px;
+                position: relative;
+            }
+
+            &::after {
+                content: "";
+                background-color: $color;
+                display: inline-block;
+                margin-left: 10px;
+                width: 100%;
+                height: 1px;
+                position: relative;
+            }
+        }
+    }
+    @elseif $style == underline {
+        flex-wrap: wrap;
+
+        @if $align == left {
+            justify-content: flex-start;
+        }
+        @elseif $align == center {
+            justify-content: center;
+        }
+        @elseif $align == right {
+            justify-content: flex-end;
+        }
+
+        &::after {
+            content: "";
+            background-color: $color;
+            bottom: -15px;
+            display: inline-block;
+            width: 100%;
+            height: 1px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+    }
+    @elseif $style == belowline {
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        @if $align == left {
+            justify-content: flex-start;
+        }
+        @elseif $align == center {
+            justify-content: center;
+        }
+        @elseif $align == right {
+            justify-content: space-between;
+            text-align: right;
+
+            * {
+                width: 100%;
+            }
+
+            &::after {
+                align-self: flex-end;
+            }
+        }
+
+        &::after {
+            content: "";
+            background-color: $color;
+            bottom: -20px;
+            width: 30px;
+            height: 1px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+    }
+    @elseif $style == boxline {
+        @if $align == left {
+            justify-content: flex-start;
+        }
+        @elseif $align == center {
+            justify-content: center;
+            text-align: center;
+        }
+        @elseif $align == right {
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        @if $boxround {
+            border-radius: 100px;
+        }
+
+        border: solid 1px $color;
+        text-transform: uppercase;
+        padding: 5px 15px;
+        width: 100%;
+
+        &::after {
+            content: none;
+        }
+    }
+}
+
+// Current WP Mega Menu =====================================
+@mixin current_wp_megamenu {
+    display: inline-block;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    &::after {
+        margin: auto;
+        content: "";
+        display: block;
+        background-color: $color-active;
+        width: 30px;
+        height: 1px;
+        position: relative;
+        top: -10px;
+    }
+}
